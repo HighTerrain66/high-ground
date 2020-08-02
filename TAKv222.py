@@ -31,8 +31,8 @@
 
 import time
 import random
-health = 100
 global health
+health = 100
 cmnd = "/: "
 room = 0# 0 is entrance, (this was a ditched feature as it's not needed. it might be utilised in a future update)
 com = ""
