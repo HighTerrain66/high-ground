@@ -20,10 +20,10 @@
 #help - brings up help
 
 #                               -NOTES-
-#If you find yourself getting a bad ending, try messing around in some rooms. TAKv1 has an easter egg which is shared in this game.
-#My apologies, but you cannot enter verb + noun commands such as "open door" or "hit warrior". It's far easier to program, and I can't stand Python list functions. This does make the game simple to do though.
+#If you find yourself getting a bad ending, try messing around in some rooms. TAKv1 has an easter egg which is shared in this game. There are two bad endings and one good ending.
+#You have my, but you cannot enter verb + noun commands such as "open door" or "hit warrior". It's far easier to program, and I can't stand Python list functions. This does make the game simple to do though.
 #Please don't claim that this is your game. Feel free to look at the code, but don't copy paste any of it. It won't benefit you whatsoever. I will know if you have copy pasted. You can learn by rewriting this in your own way but copy pasting will only boost your ego, not your programming skills
-#This is a very quick game of trial and error- please don't treat it like a AAA title.
+#This is a very quick game of trial and error- please don't treat it like an AAA title.
 #If you find any bugs, please contact me at razorcat64@gmail.com or 14ohill@stanwell.org (preferably the first one)
 #This game definietly works on python 3.3 and 3.5. I have not tried it on other versions.
 #This is the finsihed version, v2.2. More updates may come in the future.
@@ -31,7 +31,6 @@
 
 import time
 import random
-global health
 health = 100
 cmnd = "/: "
 room = 0# 0 is entrance, (this was a ditched feature as it's not needed. it might be utilised in a future update)
@@ -80,6 +79,7 @@ def healthcheck():
         exit(0)
         
 def entrance():
+    global health
     room = 0
     print("You are in a metallic hall with red fluroscent lighting.")
     time.sleep(1)
@@ -129,7 +129,6 @@ def entrance():
                 time.sleep(3)
                 print("Trump lets loose, pounding you with high calibre rounds, causing 70 damage.")
                 time.sleep(1)
-                global health
                 health = health - 70
                 healthcheck()
                 time.sleep(2)
@@ -161,7 +160,6 @@ def entrance():
                     time.sleep(3)
                     print("Trump lets loose, pounding you with high calibre rounds, causing 70 damage.")
                     time.sleep(1)
-                    global health
                     health = health - 70
                     healthcheck()
 
@@ -169,7 +167,6 @@ def entrance():
                 print("Your knuckles bounce straight off the wall and into your face")
                 time.sleep(2)
                 print("You took 5 damage")
-                global health
                 health = health - 5
                 time.sleep(1)
                 healthcheck()
@@ -177,7 +174,6 @@ def entrance():
             com = ""
 
         elif com == "status":
-            global health
             print("Your health is at " + str(health))
             time.sleep(1)
             com = ""
@@ -211,7 +207,6 @@ def entrance():
             print("City of Indie.")
             time.sleep(3)
             print("You took 100 damage")
-            global health
             health -= 100
             time.sleep(1)
             healthcheck()
@@ -227,7 +222,6 @@ def entrance():
             print("You hit yourself square in the face, dealing 10 damage!")
             time.sleep(3)
             print("You took 10 damage")
-            global health
             health -= 10
             time.sleep(1)
             healthcheck()
@@ -244,7 +238,6 @@ def entrance():
             print("To your suprise, you walk backwards into a solid metal wall.")
             time.sleep(1)
             print("You took 2 damge")
-            global health
             health -= 2
             time.sleep(1)
             healthcheck()
@@ -334,7 +327,6 @@ def entrance():
             time.sleep(3)
             print("You land straight into the mouth of a giant kitten.")
             time.sleep(2)
-            global health
             health -= 200
             print("You took 200 damage")
             time.sleep(2)
@@ -442,7 +434,6 @@ def ext():
             com = ""
 
         elif com == "status":
-            global health
             print("Your health is at " + str(health))
             time.sleep(1)
             com = ""
@@ -484,7 +475,6 @@ def ext():
             print("City of Indie.")
             time.sleep(3)
             print("You took 100 damage")
-            global health
             health -= 100
             time.sleep(1)
             healthcheck()
@@ -500,7 +490,6 @@ def ext():
             print("You hit yourself square in the face, dealing 10 damage!")
             time.sleep(3)
             print("You took 10 damage")
-            global health
             health -= 10
             time.sleep(1)
             healthcheck()
@@ -974,7 +963,6 @@ def med():
 
             
         elif com == "status":
-            global health
             print("Your health is at " + str(health))
             time.sleep(1)
             com = ""
@@ -1011,7 +999,6 @@ def med():
             print("City of Indie.")
             time.sleep(3)
             print("You took 100 damage")
-            global health
             health -= 100
             time.sleep(1)
             healthcheck()
@@ -1025,7 +1012,6 @@ def med():
             print("You hit yourself square in the face, dealing 10 damage!")
             time.sleep(3)
             print("You took 10 damage")
-            global health
             health -= 10
             time.sleep(1)
             healthcheck()
@@ -1054,7 +1040,6 @@ def med():
                 time.sleep(1)
                 print("You took 25 damage")
                 time.sleep(2)
-                global health
                 health -= 25
                 healthcheck()
                 com = ""
@@ -1108,7 +1093,6 @@ def med():
                 time.sleep(2)
                 print("Being a proper good sir, you graciously accept the gentlekitten's challenge.")
                 time.sleep(3)
-                global health
                 health -= 100
                 healthcheck()
 
@@ -1251,7 +1235,6 @@ def armoury():
             com = ""
 
         elif com == "status":
-            global health
             print("Your health is at " + str(health))
             time.sleep(1)
             com = ""
@@ -1297,7 +1280,6 @@ def armoury():
             print("City of Indie.")
             time.sleep(3)
             print("You took 100 damage")
-            global health
             health -= 100
             time.sleep(1)
             healthcheck()
@@ -1313,7 +1295,6 @@ def armoury():
             print("You hit yourself square in the face, dealing 10 damage!")
             time.sleep(3)
             print("You took 10 damage")
-            global health
             health -= 10
             time.sleep(1)
             healthcheck()
@@ -1409,9 +1390,8 @@ def armoury():
                     time.sleep(2)
                     print("The BFG blast turns back at you!")
                     time.sleep(2)
-                    if random.randint(1, 2) == 1:
-                        print("You take 140 damage")
-                        global health
+                    if random.randint(1, 3) == 1:
+                        print("You take 140 damage by mischance")
                         health -= 140
                         time.sleep(2)
                         healthcheck()
@@ -1420,7 +1400,6 @@ def armoury():
                         print("You barely manage to dive out of the way of the blast.")
                         time.sleep(2)
                         print("You take 20 damage")
-                        global health
                         health -= 20
                         time.sleep(2)
                         healthcheck()
@@ -1437,9 +1416,12 @@ def armoury():
             com = ""
         
         else:
+            if com == "look":
+                com = ""
             com = input(cmnd)
 
 def security():
+    global health
     print("You are in a dark room.")
     time.sleep(1)
     print("You can see an array of lights in front of you turn on; monitors...")
@@ -1499,7 +1481,6 @@ def security():
 
             
         elif com == "status":
-            global health
             print("Your health is at " + str(health))
             time.sleep(1)
             com = ""
@@ -1530,7 +1511,6 @@ def security():
             print("City of Indie.")
             time.sleep(3)
             print("You took 100 damage")
-            global health
             health -= 100
             time.sleep(1)
             healthcheck()
@@ -1546,7 +1526,6 @@ def security():
             print("You hit yourself square in the face, dealing 10 damage!")
             time.sleep(3)
             print("You took 10 damage")
-            global health
             health -= 10
             time.sleep(1)
             healthcheck()
@@ -1615,7 +1594,7 @@ def security():
 
     
 
-
+#init thing(this annotation was added by HighTerrain66, aka Razorcat but 4 years older)
 print("###      #       #        #     # #  #   #          ###")
 print(" #  # # ###     # # # # ###     # #     ###     # #   #")
 print(" #   #   #      ### # # # #     ##   #   #      # # ###")
