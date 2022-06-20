@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>AWE</title>
+		<style>
+			body {background-color: black; background-image: url("https://drive.google.com/uc?export=view&id=1FqLObN6x2mGWc7nTNscS8_s1_1c0aEy"); background-repeat:no-repeat;background-attachment: fixed; background-size:100% 100vh;}
+			h1 {color: blue; font-family: sans-serif; font-size: 64px;}
+			h2 {color: #3F48CC; font-family: sans-serif; font-size: 32px;}
+			p {color: powderblue; font family: sans-serif; font-size: 11px;}
+			th {color: powderblue; font-family: sans-serif; font-size: 36px; padding-left: 80px; padding-right: 80px;}
+			ul { list-style: square; }
+			ul li { color: powderblue; font family: sans-serif; font-size: 24px; padding: 5px 0px; }
+			hr { height: 1px; background-color: powderblue; }
+			video.bg {object-fit: cover; min-width: 100%; min-height: 100%; position: fixed; right:0; bottom:0; filter: blur(2px); z-index:-1;}
+			.center {display: block; margin-left: auto; margin-right: auto; width: 500px; }
+			div.borderDiv {max-width: 700px; min-width: 50px; margin: auto;}
+			div.midDiv {min-width: 400px; margin: auto;}
+			ul li.small { color: powderblue; font family: sans-serif; font-size: 18px; padding: 5px 0px;}
+		</style>
+		
+		<link rel = "shortcut icon" type="image/x-icon" href="https://drive.google.com/uc?export=view&id=1gf7tf_rzGVwNIziy38_qVTe91tOZV7rv" />
+		<!--  https://drive.google.com/file/d/1An_-Eox7xEu_3N_1RBgaxP6kRq4-18_g/view?usp=sharing-->
+		<!-- https://drive.google.com/uc?export=view&id=1TjvTIoftiLtrQq8St7J6lLlHn1-7yfYJ-->
+		<!-- video poster https://drive.google.com/uc?export=view&id=1FqLObN6x2mGWc7nTNscS8_s1_1c0aEy -->
+		<!--first menu shot  https://drive.google.com/uc?export=view&id=1wdRduzcxMiwwz7vqd26G-Gp4gIInZIns-->
+		<!-- second menu shot https://drive.google.com/uc?export=view&id=1An_-Eox7xEu_3N_1RBgaxP6kRq4-18_g>
+		<!-- https://drive.google.com/uc?export=view&id=[image_id] https://drive.google.com/file/d/[image_id]/view?usp=sharing-->
+	</head>
+	
+	
+	<body>
+		<video autoplay muted loop id="myVideo" class="bg"><source src="https://drive.google.com/uc?export=download&id=1TjvTIoftiLtrQq8St7J6lLlHn1-7yfYJ" type="video/mp4" poster="https://drive.google.com/uc?export=view&id=1FqLObN6x2mGWc7nTNscS8_s1_1c0aEy"></video>
+		<script>document.getElementById('myVideo').play();</script>
+    
+
+<div style="width: 100%;">
+		<div style="rgba(0, 0, 0, 0.8)">
+			<img align="center" src="https://drive.google.com/uc?export=view&id=1nntgqPeStREnMZggWKClSn_7kXz_NSAm" class="center" alt="AWE" title="Advanced Warfare Expedition"></img>
+			<h2 align="center">v0.25 patch notes</h1>
+			
+			<h2 align="center"></h2>
+			
+		</div>
+<table>
+	<tr>
+		<th><div class="borderDiv" /></th>
+		<th>
+		
+		<p>
+<hr>
+System changes
+<hr>
+
+<ul align="left">
+	<li>
+		Mouse control is now available, functioning quite similarly to the flight controls in ArmA 3
+	</li>
+	<li>
+		All models have been scaled up by 1.6-2.215x to provide more realistic proportions to the metric system used by Unity
+	</li>
+	<li>
+		Damage, shield, mass and thrust values have been standardised across the board.
+		<ul><li class="small">The player used to have 6 shields and 6 hull, going up against shots that did 1 damage<br>
+		On the other hand, enemy assets had within the realm of 40-200hp, going up against shots that did 12-24 damage<br>
+		Now the Altus has 150 shields and 150 hull, serving as a standard for other hp values to be based on</ul></li>
+	</li>
+	<li>
+		Collision damage is now properly based on alignment of velocity with collider normals- you come out much better from scraping an enemy transport
+		 at similar velocity than flying head first into an asteroid
+	</li>
+	<li>
+		Missile locking now has a visual indicator on the HUD- a white circle that closes around the target until it reaches minimum size and turns red
+		(the lock tone is still in game, this indicator just makes things clearer)
+	</li>
+</ul>
+<hr>
+Main Menu
+<hr>
+<div>
+	
+	<ul align="left">
+		<li>
+			The scene has been totally remade to accomodate to scale models
+		</li>
+		<li>
+			Added the field manual to the main menu. Here you can find info about controls, mechanics, and ships you will see in the field
+		</li>
+		<li>
+			Added the Chandrasekhar Battlecruiser and Excavator B.6 into the fully revised main menu scene, where they can be seen towards the end of the animation
+		</li>
+		<li>
+			Collision damage is now properly based on alignment of velocity with collider normals- you come out much better from scraping an enemy transport
+			 at similar velocity than flying head first into an asteroid
+		</li>
+		<li>
+			Updated the logo
+		</li>
+		<li>
+			In general the remade menu scene has been expanded greatly, as has the animation sequence
+		</li>
+	</ul>
+	
+
+
+<hr>
+<i>Altus F.2</i><br>
+<p>REDFORS STRIKE FIGHTER</p>
+<hr>
+<ul align="left">
+	<li>
+		Thrust to weight ratio has been buffed- there should be a noticeable increase in responsiveness
+	</li>
+	<li>
+		Laser cannon buffs
+	</li>
+	<ul>
+		<li class="small">
+			They can now fire in full-auto
+		</li>
+		<li class="small">
+			The laser cannons now automatically adjust their facing to converge at the range the target is at, allowing for more consistent damage output
+		</li>
+		<li class="small">
+			Capacitor energy has been increased, with max capacity at maintenance level being increased from 500->600, and the capacity at
+			emergency power being increased from 1000->1300. This means you can fire off more shots in succession, especially with power
+			diverted to weapons
+		</li>
+		
+	</ul>
+	<li>
+		Model changes
+	</li>
+	<ul>
+		<li class="small">
+			The model is now symmetrical, boasts greater detail, has larger laser cannons, and is shaded smoothly. The shading change might be reverted
+			since the old look did have a certain charm to it
+		</li>
+		<li class="small">
+			Added a targeting camera to the cockpit/HUD, alongside data about the target including 'health' values, target type, and relative velocity
+		</li>
+		<li class="small">
+			Canopy superstructure has been added which houses a rearview mirror with a PIP display
+		</li>
+		<li class="small">
+			Added a new shield display sprite (no more legacy sprite showing gunpods even if they aren't mounted)
+		</li>
+	</ul>
+</ul>
+
+<hr>
+<i>Falchion-Class</i><br>
+<p>REDFORS LIGHT CARRIER</p>
+<hr>
+<ul align="left">
+	<li>
+		Point defence cannons have been added to the carrier which fire on small threats within a 800m radius. These can include fighters, sensor probes, 
+		incoming munitions, and smaller transports
+	</li>
+	<li>
+		The docking warnings now give directions to the player such as 'YAW LEFT', 'PITCH DOWN', 'POSITION UP' or 'POSITION RIGHT'
+	</li>
+	<li>
+		Like the Altus, the model is now shaded smoothly. On top of this, some face normals have been corrected so there's no longer a chipped looking
+		communications array
+	</li>
+</ul>
+<hr>
++ <i>Excavator</i> B.6<br>
+<p>REDFORS BOMBER</p>
+<hr>
+A bomber with a reverse delta wing design, stocked with missile launchers and plenty of other hardpoints
+<p>(planned to be playable in next update)</p>
+
+<hr>
+G-110 Transport<br>
+<p>GRENFORS TRANSPORT</p>
+<hr>
+<ul align="left">
+	<li>
+		The turrets now have limited travesal zones, but have more accurate tracking otherwise
+	</li>
+</ul>
+<hr>
+N-163 <i><b>'Asag'</b></i><br>
+<p>GRENFORS LIGHT FIGHTER</p>
+<hr>
+<ul align="left">
+	<li>
+		This pesky little light fighter should be less of an issue to catch now, seeing nerfs to its thrust to weight ratio and some AI fixes<br>
+		<p>(it still has higher TWR than the Altus F.2, but only at full thrust which it can only pull out for a few seconds before overheating)</p>
+	</li>
+	<li>
+		Model has seen more major design changes in terms of texturing
+	</li>
+	<li>
+		The AI now attempts to evade obstacles other than the player, this includes an ability to navigate tunnel-like geometry
+	</li>
+</ul>
+<hr>
++ <i><b>Chandrasekhar</b></i><br>
+<p>GRENFORS BATTLECRUISER</p>
+<hr>
+A 1.6km long monster, it boasts an unfathomable array of firepower.<br>
+It's present in the menu scene and hidden in one of the missions. For now, it can fire its wing mounted cannons and defend itself with point defence
+cannons, but it will not move for any reason, and it is impervious to damage.
+<br>
+<hr>
+Test Mission 1<br>
+<hr>
+<ul align="left">
+	<li>
+		More probes have been added to compensate for the carrier's point defence cannons joining in on the fun
+	</li>
+	<li>
+		An optional task has been added for destroying all enemy fighters
+	</li>
+	<li>
+		2 more transports have been added to the convoy
+	</li>
+</ul>
+<hr>
++ Test Mission 2<br>
+<hr>
+<ul align="left">
+	<li>
+		The stage is set for the neutralisation of an enemy mining operation in deep space; the light carrier 'Nomad' and its complement of strike craft 
+		attempt to sabotage the defences of an asteroid base to allow the  frigates 'Red Shade' and 'Defiant' to attack.
+	</li>
+	<li>
+		An optional task has been added for destroying all enemy fighters
+	</li>
+	<li>
+		2 more transports have been added to the convoy
+	</li>
+</ul>
+<br>
+<hr>
+Basic Training<br>
+<hr>
++ The tutorial has been improved in general, including improved hint clarity, the player being warned if they accidentally<br>
+turn off TRIM or the stabiliser, and a hologram attached to the carrier rack to help the player dock for the first time<br>
+<br>
+<hr>
++ Course 1<br>
+<hr>
+<ul align="left">
+	<li>
+		 A more basic course level with larger waypoint rings and less requirement for speed control or stabiliser toggling
+	</li>
+</ul>
+<hr>
+Course 2<br>
+<hr>
+<ul align="left">
+	<li>
+		This already existing intermediate course has been renamed to Course 2
+	</li>
+	<li>
+		Checkpoint start locations have been improved
+	</li>
+	<li>
+		New obstacles have been added to the scene
+	</li>
+</ul>
+<hr>
++ Course 3<br>
+<hr>
+<ul align="left">
+	<li>
+		An advanced course level inspired by the attack on Death Star II in RotJ
+	</li>
+	<li>
+		Requires use of every advanced control technique to get through
+	</li>
+</ul>
+<hr>
+Misc.<br>
+<hr>
+<ul align="left">
+	<li>
+		Added polymorphism to classes behind the scenes, following a proper course I did to learn C++ and object oriented standards
+	</li>
+	<li>
+		And various little optimisations, load times should be quicker as well as less RAM usage in the same scenes (definitely not menu scene though)
+	</li>
+</ul>
+		</th>
+		<th><div class="borderDiv" /></th>
+	</tr>
+</table>
+</div>
+	</body>
+</html>
