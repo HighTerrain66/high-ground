@@ -1,3 +1,10 @@
+# For clarity this Razorcat is the 6 years younger version of HighTerrain66.
+# This is an ok text adventure with a substantial amount of cringeworthy content
+# On the programming side, it's some of the worst code I've ever written with mountainous if-else blocks, sparse commenting, and unclear identifiers.
+
+
+
+
 #Text Adventure Kittens 2 by Razorcat
 #      ###      #       #        #     # #  #   #          ###    ###
 #       #  # # ###     # # # # ###     # #     ###     # #   #      #
