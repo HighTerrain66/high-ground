@@ -4,18 +4,19 @@
 		<title>AWE</title>
 		<style>
 			body {background-color: black; background-image: url("https://drive.google.com/uc?export=view&id=1FqLObN6x2mGWc7nTNscS8_s1_1c0aEy"); background-repeat:no-repeat;background-attachment: fixed; background-size:100% 100vh;}
-			h1 {color: blue; font-family: sans-serif; font-size: 64px;}
-			h2 {color: #3F48CC; font-family: sans-serif; font-size: 32px;}
+			h1 {color: #3F48CC; font-family: sans-serif; font-size: 64px; padding: 5px 0px; margin: 0;}
+			h2 {color: #3F48CC; font-family: sans-serif; font-size: 32px; padding: 5px 0px;}
 			p {color: powderblue; font family: sans-serif; font-size: 11px;}
 			th {color: powderblue; font-family: sans-serif; font-size: 36px; padding-left: 80px; padding-right: 80px;}
 			ul { list-style: square; }
-			ul li { color: powderblue; font family: sans-serif; font-size: 24px; padding: 5px 0px; }
+			ul li { color: powderblue; font family: sans-serif; font-size: 24px; padding: 7px 0px; }
 			hr { height: 1px; background-color: powderblue; }
 			video.bg {object-fit: cover; min-width: 100%; min-height: 100%; position: fixed; right:0; bottom:0; filter: blur(2px); z-index:-1;}
 			.center {display: block; margin-left: auto; margin-right: auto; width: 500px; }
 			div.borderDiv {max-width: 700px; min-width: 50px; margin: auto;}
 			div.midDiv {min-width: 400px; margin: auto;}
 			ul li.small { color: powderblue; font family: sans-serif; font-size: 18px; padding: 5px 0px;}
+			
 		</style>
 		
 		<link rel = "shortcut icon" type="image/x-icon" href="https://drive.google.com/uc?export=view&id=1gf7tf_rzGVwNIziy38_qVTe91tOZV7rv" />
@@ -31,22 +32,26 @@
 	<body>
 		<video autoplay muted loop id="myVideo" class="bg"><source src="https://drive.google.com/uc?export=download&id=1TjvTIoftiLtrQq8St7J6lLlHn1-7yfYJ" type="video/mp4" poster="https://drive.google.com/uc?export=view&id=1FqLObN6x2mGWc7nTNscS8_s1_1c0aEy"></video>
 		<script>document.getElementById('myVideo').play();</script>
+		<!-- inline script above because there were issues with the video autoplaying -->
     
 
 <div style="width: 100%;">
 		<div style="rgba(0, 0, 0, 0.8)">
 			<img align="center" src="https://drive.google.com/uc?export=view&id=1nntgqPeStREnMZggWKClSn_7kXz_NSAm" class="center" alt="AWE" title="Advanced Warfare Expedition"></img>
-			<h2 align="center">v0.25 patch notes</h1>
+			<h1 align="center">v0.25</h1>
 			
-			<h2 align="center"></h2>
+			
 			
 		</div>
 <table>
 	<tr>
-		<th><div class="borderDiv" /></th>
+		<th>
+		<div class="borderDiv">
+		
+		</div>
+		</th>
 		<th>
 		
-		<p>
 <hr>
 System changes
 <hr>
@@ -71,6 +76,12 @@ System changes
 	<li>
 		Missile locking now has a visual indicator on the HUD- a white circle that closes around the target until it reaches minimum size and turns red
 		(the lock tone is still in game, this indicator just makes things clearer)
+	</li>
+	<li>
+		A shifting world origin has been introduced
+		<ul><li class="small">Previously, when at positions of great magnitude(e.g. 5km away from world origin), objects would appear to oscillate due to<br>
+		floating point position imprecision, this should no longer occur</li>
+		<li class = "small">Because of this, maps introduced in future updates can be made larger</li></ul>
 	</li>
 </ul>
 <hr>
@@ -144,6 +155,12 @@ Main Menu
 		<li class="small">
 			Added a new shield display sprite (no more legacy sprite showing gunpods even if they aren't mounted)
 		</li>
+	</ul>
+	<li>
+		A searchlight has been added which can be toggled with ;
+	</li>
+	<ul>
+		<li class="small">It's handy for navigating the dark areas found inside asteroids and throughout Course 1 and Mission 2
 	</ul>
 </ul>
 
@@ -227,10 +244,11 @@ Test Mission 1<br>
 		attempt to sabotage the defences of an asteroid base to allow the  frigates 'Red Shade' and 'Defiant' to attack.
 	</li>
 	<li>
-		An optional task has been added for destroying all enemy fighters
+		An Altus fighter will clear the way for an Excavator bomber, packed with volatile ordnance, to navigate through the asteroid base and destroy anything 
+		necessary to maintain the mass driver array
 	</li>
 	<li>
-		2 more transports have been added to the convoy
+		As 'Nomad' approaches the base, an energy reading is picked up that starts to exceed that of the base's reactor...
 	</li>
 </ul>
 <br>
@@ -270,13 +288,28 @@ Course 2<br>
 		An advanced course level inspired by the attack on Death Star II in RotJ
 	</li>
 	<li>
-		Requires use of every advanced control technique to get through
+		Requires use of every advanced control technique to get through the 16km diameter battlestation
 	</li>
 </ul>
 <hr>
 Misc.<br>
 <hr>
 <ul align="left">
+	<li>
+		The callsign system has been partially implemented
+		<ul><li class="small">You earn a callsign after meeting the prerequisites to start field missions- this is displayed in the main menu for now, 
+		but it will change voice lines in the future (currently, the player is always referred to as 'Rake')</li>
+		<li class="small">Callsigns and the ways to obtain them include:<br><br>
+		<b>[<i> RAKE </i>]</b><br>
+		Destroy every target in a VR mission<br><br>
+		[<i> BOUNDER </i>]<br>
+		Friendly fire<br><br>
+		[<i> CRUSADER </i>]<br>
+		Refuse to use missiles and make gun kills against fighters<br><br>
+		[<i> DEADPAN</i>]<br>
+		Don't make substantial contributions to the other callsigns
+		</ul>
+	</li>
 	<li>
 		Added polymorphism to classes behind the scenes, following a proper course I did to learn C++ and object oriented standards
 	</li>
