@@ -61,6 +61,9 @@ System changes
 		Mouse control is now available, functioning quite similarly to the flight controls in ArmA 3
 	</li>
 	<li>
+		A virtual soundscape has been added; you can now hear some synthesized sounds of enemy engines, gunfire, and missiles
+	</li>
+	<li>
 		All models have been scaled up by 1.6-2.215x to provide more realistic proportions to the metric system used by Unity
 	</li>
 	<li>
@@ -77,11 +80,18 @@ System changes
 		Missile locking now has a visual indicator on the HUD- a white circle that closes around the target until it reaches minimum size and turns red
 		(the lock tone is still in game, this indicator just makes things clearer)
 	</li>
+	
+	<li>
+		All shot models have been replaced, also now featuring trails with consistent lengths
+	</li>
 	<li>
 		A shifting world origin has been introduced
 		<ul><li class="small">Previously, when at positions of great magnitude(e.g. 5km away from world origin), objects would appear to oscillate due to<br>
 		floating point position imprecision, this should no longer occur</li>
 		<li class = "small">Because of this, maps introduced in future updates can be made larger</li></ul>
+	</li>
+	<li>
+		The render pipeline has been changed to URP- things look shinier now, and I generally prefer the look
 	</li>
 </ul>
 <hr>
@@ -122,11 +132,14 @@ Main Menu
 		Thrust to weight ratio has been buffed- there should be a noticeable increase in responsiveness
 	</li>
 	<li>
-		Laser cannon buffs
+		Laser cannons have received substantial buffs
 	</li>
 	<ul>
 		<li class="small">
 			They can now fire in full-auto
+		</li>
+		<li class="small">
+			Muzzle velocity has been increased from 200->300ms^-1
 		</li>
 		<li class="small">
 			The laser cannons now automatically adjust their facing to converge at the range the target is at, allowing for more consistent damage output
@@ -277,7 +290,7 @@ Course 2<br>
 		Checkpoint start locations have been improved
 	</li>
 	<li>
-		New obstacles have been added to the scene
+		New obstacles have been added to the scene, with a revamped asteroid field
 	</li>
 </ul>
 <hr>
@@ -314,7 +327,7 @@ Misc.<br>
 		Added polymorphism to classes behind the scenes, following a proper course I did to learn C++ and object oriented standards
 	</li>
 	<li>
-		And various little optimisations, load times should be quicker as well as less RAM usage in the same scenes (definitely not menu scene though)
+		And various little optimisations, load times should be quicker in general, but the new renderer and higher object and effect counts hurt GPU usage quite a lot
 	</li>
 </ul>
 		</th>
