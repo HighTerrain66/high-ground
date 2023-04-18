@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>AWE</title>
+		<style>
+			body {background-color: black; background-image: url("https://drive.google.com/uc?export=view&id=1FqLObN6x2mGWc7nTNscS8_s1_1c0aEy"); background-repeat:no-repeat;background-attachment: fixed; background-size:100% 100vh;}
+			h1 {color: #0552EC; font-family: sans-serif; font-size: 64px; padding: 5px 0px; margin: 0;}
+			h2 {color: #3F48CC; font-family: sans-serif; font-size: 32px; padding: 5px 0px;}
+			p {color: powderblue; font family: sans-serif; font-size: 11px;}
+			th {color: powderblue; font-family: sans-serif; font-size: 36px; padding-left: 80px; padding-right: 80px;}
+			ul { list-style: square; }
+			ul li { color: powderblue; font family: sans-serif; font-size: 24px; padding: 7px 0px; }
+			hr { height: 1px; background-color: powderblue; }
+			video.bg {object-fit: cover; min-width: 100%; min-height: 100%; position: fixed; right:0; bottom:0; filter: blur(2px); z-index:-1;}
+			.center {display: block; margin-left: auto; margin-right: auto; width: 500px; }
+			div.borderDiv {max-width: 700px; min-width: 50px; margin: auto;}
+			div.midDiv {min-width: 400px; margin: auto;}
+			ul li.small { color: powderblue; font family: sans-serif; font-size: 18px; padding: 5px 0px;}
+			
+		</style>
+		
+		<link rel = "shortcut icon" type="image/x-icon" href="https://drive.google.com/uc?export=view&id=1gf7tf_rzGVwNIziy38_qVTe91tOZV7rv" />
+		<!--  https://drive.google.com/file/d/1An_-Eox7xEu_3N_1RBgaxP6kRq4-18_g/view?usp=sharing-->
+		<!-- https://drive.google.com/uc?export=view&id=1TjvTIoftiLtrQq8St7J6lLlHn1-7yfYJ-->
+		<!-- video poster https://drive.google.com/uc?export=view&id=1FqLObN6x2mGWc7nTNscS8_s1_1c0aEy -->
+		<!--first menu shot  https://drive.google.com/uc?export=view&id=1wdRduzcxMiwwz7vqd26G-Gp4gIInZIns-->
+		<!-- second menu shot https://drive.google.com/uc?export=view&id=1An_-Eox7xEu_3N_1RBgaxP6kRq4-18_g>
+		<!-- https://drive.google.com/uc?export=view&id=[image_id] https://drive.google.com/file/d/[image_id]/view?usp=sharing-->
+		<!-- new video raw https://drive.google.com/file/d/1Sw8Q6KkRalKBTK77zY_27lYbJFqnUTEn/view?usp=sharing -->
+	</head>
+	
+	
+	<body>
+		<video autoplay muted loop id="myVideo" class="bg"><source src="https://drive.google.com/uc?export=download&id=1Sw8Q6KkRalKBTK77zY_27lYbJFqnUTEn" type="video/mp4" poster="https://drive.google.com/uc?export=view&id=1FqLObN6x2mGWc7nTNscS8_s1_1c0aEy"></video>
+		<script>document.getElementById('myVideo').play();</script>
+		<!-- inline script above because there were issues with the video autoplaying -->
+    
+
+<div style="width: 100%;">
+		<div style="rgba(0, 0, 0, 0.8)">
+			<img align="center" src="https://drive.google.com/uc?export=view&id=1xZGMkSBUE7CMxoseYZQwjnp2R2BvgALb" class="center" alt="AWE" title="Advanced Warfare Expedition"></img>
+			<h1 align="center">v0.27</h1>
+			
+			
+			
+		</div>
+<table>
+	<tr>
+		<th>
+		<div class="borderDiv">
+		
+		</div>
+		</th>
+		<th>
+
+<hr>
+Summary
+<hr>
+The main goals of this update were to bring different playable ships into the game, and to optimise my codebase with lessons 
+I'd learned from my UE4 work. If I could accomplish that, working online multiplayer in down the line might become a real and exciting possibility.
+
+After 4 months of work, I've just about finished with it, on top of some extra improvements. After overhauling almost the entire codebase, every existing ship
+had their HP and movement mechanics standardised under the umbrella of 'BaseAsset', bringing parity between AI entities and the player ship in functionality.
+The new AI behaviour for FighterAssets took 
+a much faster pace
+<br>
+
+
+<hr>
+System changes
+<hr>
+
+<ul align="left">
+	<li>
+		AI controlled ships now work with the same mechanics as player ships, and vice versa
+		<ul><li class="small">As a result, previously AI-only ships can now be player controlled. On top of the Altus, 3 more playable ships are now available</li>
+		<li class="small">In some missions, you can take control of AI allies after death to carry on the fight</li>
+		</ul>
+		
+	</li>
+	<li>
+		Fighter AI has been overhauled- I believe this new behaviour is more fun and realistic, but they can have a tendency to spin off into the distance when trying
+		to take advantage of the stabiliser, and are generally place their shots much less accurately than before.
+	</li>
+	<li>
+		Separate physics mechanics have been added to captial ships to allow them to move around freely at last
+	</li>
+	<li>
+		A new mission ranking system has been introduced- push your skills to the limit to get an S-Rank in your favourite missions!
+	</li>
+	
+</ul>
+<hr>
+Main Menu
+<hr>
+<div>
+	
+	<ul align="left">
+		<li>
+			Descriptions for different buttons are displayed when hovering over them, letting you know what you're getting into before you press one
+		</li>
+		<li>
+			An options menu has been added where graphics quality presets can be selected,
+			and different control presets can be opted into (Keyboard + Mouse, Gamepad + Keyboard, Flight Stick + Keyboard)
+			<ul><li class="small">()</li></ul>
+		</li>
+		<li>
+			An Estoc-Class Frigate has been added to the menu scene
+		</li>
+		
+		
+	</ul>
+	
+
+
+<hr>
+<i>Altus F.2</i><br>
+<p>REDFORS STRIKE FIGHTER</p>
+<hr>
+<ul align="left">
+	<li>
+		SGP Gunpods are now available for installation in the hangar, providing high velocity firepower with a serious wallop
+		<ul><li class="small">They require some time to manually charge before firing, and once charged, they automatically fire after a fixed delay</li>
+		<li class="small">Coming from this charge time are two lightning fast beams that deal 10x the damage of the Altus' integrated guns</li>
+		<li class="small">Unlike HEP missiles, they draw from the Altus' replenishing store of weapon energy and do not require reloading trips for repeat firing</li>
+		<li class="small">They can be fired in tandem with integrated weaponry, quickly cashing out on stored weapon energy for massive damage</li>
+		</ul>
+	</li>
+	
+	<li>
+		Integrated Laser cannons have been further buffed to keep up with the increased pace of fighter on fighter combat
+	<ul>
+		<li class="small">
+			Muzzle velocity has been increased from 300->550ms^-1
+		</li>	
+	</ul>
+	</li>
+	<li>
+		HEP Missiles
+		<ul>
+		<li class="small">
+			A longtime bug causing HEP Missile starting velocity to be slower than the launching ship has been fixed
+		</li>
+		<li class="small">
+			As a result, they boast quicker kill times and increased range
+		</li>
+		<li class="small">
+			Explosion SFX have finally been added
+		</li>
+		<li class="small">
+			The collider is extended when at very high speeds, to increase consistency of collisions
+		</li>
+	</ul>
+	</li>
+</ul>
+
+<hr>
+<i>Falchion-Class</i><br>
+<p>REDFORS LIGHT CARRIER</p>
+<hr>
+<ul align="left">
+	<li>
+		Point defence cannons now have firing SFX, and are more beastly than ever before
+		<ul>
+		<li class="small">
+			Firing range buffed from 800->1000m
+		</li>
+	</li>
+</ul>
+<hr>
++ <i>Excavator</i> B.6<br>
+<p>REDFORS BOMBER</p>
+<hr>
+A bomber with a reverse delta wing design, stocked with 12 missile launchers and plenty of other hardpoints<br>
+<ul align="left">
+	<li>
+		Featured in the new missions 'Asag Defence' and 'Strike', being a playable asset in the latter
+	</li>
+</ul>
+<hr>
++ <i>Estoc-Class</i> B.6<br>
+<p>REDFORS Destroyer</p>
+<hr>
+A 675m long Capital Ship, bringing extensive firepower to <b>A.W.E</b> missions where the ordnance of a light carrier doesn't cut it, and subtlety is less of a requirement<br>
+
+<hr>
+N-163 <i><b>'Asag'</b></i><br>
+<p>GRENFORS LIGHT FIGHTER</p>
+<hr>
+<ul align="left">
+	<li>
+		The Asag now works much the same as the Altus under the hood, but still lacks any manual power management, loadout options or shielding.
+	</li>
+	<li>
+		Laser Cannons have been buffed
+		<ul>
+		<li class="small">
+			Muzzle velocity has been increased from 200->400ms^-1
+		</li>
+		<li class="small">
+			A visible lead indicator in the HUD helps the Asag to track fast moving targets
+		</li>
+		<li class="small">
+			Firing SFX have been added
+		</li>
+	</ul>
+	</li>
+	
+</ul>
+<hr>
+<i><b>Chandrasekhar</b></i><br>
+<p>GRENFORS BATTLECRUISER</p>
+<hr>
+<ul align="left">
+	<li>
+		If 
+	</li>
+
+	
+</ul>
+<br>
+
+<hr>
++ Asag Defence<br>
+<hr>
+A new mission flown from the GRENFORS side
+<ul align="left">
+	<li>
+		A REDFORS strike group tracks down the <i>Chandrasekhar</i> Battlecruiser, but its vast complement of N-163 <i><b>'Asag'</b></i> fighters won't easily allow a handful of hapless bombers with a pitiful escort make their mark on the pride of the fleet...
+	</li>
+</ul>
+
+<hr>
+Tutorial<br>
+</hr>
+<ul align="left">
+	<li>
+		Hints have been rewritten for clarity, and previous hints can be viewed by cycling through them with the arrow keys
+	</li>
+	<li>
+		VR Targets have been made larger
+	</li>
+</ul>
+
+<hr>
+Course 3<br>
+<hr>
+<ul align="left">
+	<li>
+		Added the CRISIS timer- destroy the station's reactor in 3 minutes, or face the opened gates of hell.
+	</li>
+	<li>
+		The surface turrets have been made more dangerous, adding more peril to the initial approach. In general, flying through the cover of the trench is much more encouraged. 
+		<ul>
+		<li class="small">
+			Buffed tower turret shot velocity from 600->850ms^-1
+		</li>
+		<li class="small">
+			Buffed small turret reloading time from 0.5s to 0.25s
+		</li>
+		</ul>
+	</li>
+
+</ul>
+	
+
+
+<hr>
+Misc.<br>
+<hr>
+<ul align="left">
+	<li>
+		Partial support for gamepads and flight sticks has been implemented
+	</li>
+	<li>
+		Time debug inputs have been fixed
+		<ul>
+			<li class="small">
+			Finally, The World is at peace
+			</li>
+		</ul>
+	</li>
+	<li>
+		Fixed the targeting camera displaying turrets and waypoints as 'Unknown Target'
+	</li>
+</ul>
+		</th>
+		<th><div class="borderDiv" /></th>
+	</tr>
+</table>
+</div>
+	</body>
+</html>
